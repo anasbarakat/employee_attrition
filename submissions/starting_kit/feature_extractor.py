@@ -6,17 +6,18 @@ import numpy as np
 class FeatureExtractor():
 
     def __init__(self):
-        return self
+        pass
     
-    def dummify(df):
+    def dummify(self, df):
         dum_dep = pd.get_dummies(df['department'])
+        df = df.drop('name', axis=1)
         df = df.drop('department', axis=1)
         df = df.join(dum_dep)
         #add dummy variable
         #df = data.join(datanew)
         dum_sal = pd.get_dummies(df['salary'])
         df = df.drop('salary', axis=1)
-        df = df.join(dum_sa)
+        df = df.join(dum_sal)
         #df = data.join(datanew)
         return (df)
     
@@ -29,5 +30,4 @@ class FeatureExtractor():
     def transform(self, X_df):
         X = self.dummify(X_df)
         return X
-
 
