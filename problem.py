@@ -24,9 +24,9 @@ workflow = rw.workflows.FeatureExtractorClassifier()
 
 score_types = [
     rw.score_types.roc_auc(name='ROC-AUC', precision=3),
-    rw.score_types.f1_score(name='F1 Score', precision=3),
-    rw.score_types.precision_score(name='Precision Score', precision=3),
-    rw.score_types.recall_score(name='Recall Score', precision=3)                                   
+#     rw.score_types.f1_score(name='F1 Score', precision=3),
+#     rw.score_types.precision_score(name='Precision Score', precision=3),
+#     rw.score_types.recall_score(name='Recall Score', precision=3)                                   
 ]
 
 
