@@ -6,13 +6,13 @@ Employees attrition or churn prediction is known to be a big issue for compagnie
 Authors: 
 ```
 Ahmed ferjani
-```
+
 Anas barakat
-```
+
 Itaf ahmadi 
-```
+
 Jawher soudani
-```
+
 Wissem hamidou
 ```
 
