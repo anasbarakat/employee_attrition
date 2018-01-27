@@ -33,7 +33,7 @@ rw.score_types.accuracy.Accuracy(name='Accuracy', precision=3)
 
 
 def get_cv(X, y):
-    ''' cross-validation using stratfied 
+    ''' cross-validation using stratified 
     '''
     cv = StratifiedShuffleSplit(n_splits= 5, test_size= 0.5, random_state=43)
 

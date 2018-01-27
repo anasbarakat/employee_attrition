@@ -9,6 +9,7 @@ class FeatureExtractor():
         pass
     
     def dummify(self, df):
+        print(df.department.nunique())
         dum_dep = pd.get_dummies(df['department'])
         df = df.drop('name', axis=1)
         df = df.drop('department', axis=1)
