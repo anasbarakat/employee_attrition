@@ -11,7 +11,7 @@ Jawher soudani
 Wissem hamidou
 
 
-[![Build Status](http://ses.telecom-paristech.fr/wp-content/themes/luna/images/logo-TP.png)](https://www.google.com)
+[![Build Status](https://www6.inra.fr/var/internet6_national_saclay_plant_sciences/storage/images/media/images-contenu/presentation/tutelles/logo-universite-paris-saclay-tour-blanc/59755-1-fre-FR/Logo-Universite-Paris-Saclay-Tour-blanc.jpg)](https://www.google.com)
 
 Go to [`ramp-worflow`](https://github.com/paris-saclay-cds/ramp-workflow) for more help on the [RAMP](http:www.ramp.studio) ecosystem.
 
