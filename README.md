@@ -26,10 +26,16 @@ Install ramp-workflow (rampwf), then execute
 ramp_test_submission
 ```
 
-to test the starting kit submission (`submissions/starting_kit`) and
+to test the starting kit submission (`submissions/starting_kit`) 
 
 ```
 ramp_test_submission --submission=starting_kit
+```
+
+to use quick test
+
+```
+ramp_test_submission --quick-test
 ```
 
 to test `starting_kit` or any other submission in `submissions`.
