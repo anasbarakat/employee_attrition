@@ -11,7 +11,7 @@ Jawher soudani
 Wissem hamidou
 
 
-[![Build Status]()](https://www.google.com)
+[![Build Status](http://ses.telecom-paristech.fr/wp-content/themes/luna/images/logo-TP.png)](https://www.google.com)
 
 Go to [`ramp-worflow`](https://github.com/paris-saclay-cds/ramp-workflow) for more help on the [RAMP](http:www.ramp.studio) ecosystem.
 
