@@ -13,7 +13,7 @@ from sklearn.model_selection import StratifiedShuffleSplit
 
 problem_title = ' Employee Attrition group'
 _target_column_name = 'left'
-_prediction_label_names = [0, 1]
+_prediction_label_names = [0,1,2,3,4]
 
 # A type (class) which will be used to create wrapper objects for y_pred
 Predictions = rw.prediction_types.make_multiclass(
@@ -26,7 +26,6 @@ workflow = rw.workflows.FeatureExtractorClassifier()
 #     rw.score_types.precision_score(name='Precision Score', precision=3),
 #    rw.score_types.recall_score(name='Recall Score', precision=3) 
 score_types = [
-    rw.score_types.roc_auc.ROCAUC(name='ROC-AUC', precision=3),
 rw.score_types.accuracy.Accuracy(name='Accuracy', precision=3)
                                   
 ]
@@ -46,7 +45,7 @@ def _read_data(path, f_name):
     X_df = data.drop(_target_column_name, axis=1)
     test = os.getenv('RAMP_TEST_MODE', 0)
     if test:
-        return X_df[:100], y_array[:100]
+        return X_df[:500], y_array[:500]
     else:
         return X_df, y_array
     
