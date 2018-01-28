@@ -40,6 +40,6 @@ ramp_test_submission --quick-test
 
 to test `starting_kit` or any other submission in `submissions`.
 
-Get started on this RAMP with the [dedicated notebook](https://github.com/anasbarakat/employee_attrition/blob/master/ML_Business_case.ipynb).
+Get started on this RAMP with the [dedicated notebook](https://github.com/anasbarakat/employee_attrition/blob/master/employee_attrition_starting_kit.ipynb).
 
 
