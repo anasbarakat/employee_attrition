@@ -31,7 +31,7 @@ score_types = [
 
 
 def get_cv(X, y):
-    ''' cross-validation using stratfied 
+    ''' cross-validation using stratified 
     '''
     cv = StratifiedShuffleSplit(n_splits= 5, test_size= 0.5, random_state=43)
 

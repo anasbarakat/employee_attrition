@@ -1,0 +1,20 @@
+Description of the dataset 
+
+The original dataset can be found following this link: 
+https://github.com/Verteego/hr-analytics/blob/master/data/raw_data.csv
+
+The data we use for the challenge is also available in the directory "data" of our github repository : https://github.com/anasbarakat/employee_attrition.git 
+
+Available features: 
+- name =  employee’s last name
+- satisfaction_level = a mark between 0 and 1 that indicate the satisfaction level of the employee
+- last_evaluation = the employee last evaluation of the company
+- number_projects =  the number of projects done by the employee
+- average_monthly_hours = the average of hours of works spent monthly by the employee
+- time_spent_company = number of years spent by the employee in the company 
+- work_accident = number of work accident that happened to the employee 
+- left = indicate if the employee had left the firm or not :  1 if attrition 0 otherwise 
+- promotion_last_5_years = 1 if the employee received a promotion the last 5 years, 0 if not
+- department = where the employee worked/ is working
+- salary = indicate the level of the salary given to the employee, there are 3 categories : low, medium and high 
+- salary_level = numerical version of the salary parameter : 1 for low, 2 for medium and 3 for high 
