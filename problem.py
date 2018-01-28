@@ -7,6 +7,7 @@ import pandas as pd
 import random
 import numpy as np
 import rampwf as rw
+import os
 from sklearn.metrics import f1_score,accuracy_score,roc_auc_score,precision_score,recall_score
 from sklearn.model_selection import StratifiedShuffleSplit
 
@@ -21,12 +22,13 @@ Predictions = rw.prediction_types.make_multiclass(
 # An object implementing the workflow
 workflow = rw.workflows.FeatureExtractorClassifier()
 
-
+#    rw.score_types.f1_score(name='F1 Score', precision=3),
+#     rw.score_types.precision_score(name='Precision Score', precision=3),
+#    rw.score_types.recall_score(name='Recall Score', precision=3) 
 score_types = [
-    rw.score_types.roc_auc(name='ROC-AUC', precision=3),
-    rw.score_types.f1_score(name='F1 Score', precision=3),
-    rw.score_types.precision_score(name='Precision Score', precision=3),
-    rw.score_types.recall_score(name='Recall Score', precision=3)                                   
+    rw.score_types.roc_auc.ROCAUC(name='ROC-AUC', precision=3),
+rw.score_types.accuracy.Accuracy(name='Accuracy', precision=3)
+                                  
 ]
 
 
