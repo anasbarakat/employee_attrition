@@ -19,7 +19,7 @@ def final_dummies_fix( X_df, cols ):
     	print("you haven't added all the missing dummies !!!")
 
     #print ( "perfect add !!")
-# Here we check if we do not have the same columns in the test and the train samples (rare but possible)
+# Here we check if the  columns in the test and the train samples are the same.
     ext_columns = set( X_df.columns ) - set( cols )
     if ext_columns:
         print ("there are extra columns in your features:", ext_columns)
