@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
+
 from sklearn.base import BaseEstimator
-#from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 
 class Classifier(BaseEstimator):
