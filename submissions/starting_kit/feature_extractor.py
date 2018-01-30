@@ -12,38 +12,35 @@ def add_missing_dummies( X_df, cols ):
 def final_dummies_fix( X_df, cols ):  
 
     add_missing_dummies( X_df, cols )
-#être sûr que tous les colonnes existent aprés le truc de add missing dummies
+# Make sure all columns exists after the add of missing dummies
     try:
         assert( set( cols ) - set( X_df.columns ) == set())
     except AssertionError:
     	print("you haven't added all the missing dummies !!!")
 
     #print ( "perfect add !!")
-#ici c pour vérifier s'il y a meme des collones dans test mais pas dans train (rare mais possible)
+# Here we check if we do not have the same columns in the test and the train samples (rare but possible)
     ext_columns = set( X_df.columns ) - set( cols )
     if ext_columns:
         print ("there are extra columns in your features:", ext_columns)
-#ça pour organiser les features pour s'assurer que dans tous les cas on a toujours le meme ordre que les données dans train 
+# Organizing features and make sure that the order of data in the train is always the same 
     X_df = X_df[ cols ]
     return X_df
 
 
 
 def dummify( df):
-
+	""" This function is used to generate dummy variables from some features """
+	# dummy of department
 	dum_dep = pd.get_dummies(df['department'])
 	df = df.drop('name', axis=1)
 	df = df.drop('department', axis=1)
 	df = df.join(dum_dep)
-
-
-	#add dummy variable
-	#df = data.join(datanew)
+	
+	# dummy of salary
 	dum_sal = pd.get_dummies(df['salary'])
 	df = df.drop('salary', axis=1)
 	df = df.join(dum_sal)
-	    #df = data.join(datanew)
-	#print(df.columns)
 	return (df)
 
 
@@ -56,21 +53,6 @@ class FeatureExtractor():
                       'salary_level', 'IT','RandD', 'accounting', 'hr', 'management', 'marketing', 'product_mng','sales',\
                       'support', 'technical', 'high', 'low', 'medium']
 
-    def dummify(self, df):
-        print(df.department.nunique())
-        dum_dep = pd.get_dummies(df['department'])
-        df = df.drop('name', axis=1)
-        df = df.drop('department', axis=1)
-        df = df.join(dum_dep)
-        #add dummy variable
-        #df = data.join(datanew)
-        dum_sal = pd.get_dummies(df['salary'])
-        df = df.drop('salary', axis=1)
-        df = df.join(dum_sal)
-        #df = data.join(datanew)
-        return (df)
-
-    
     def fit(self, X_df, y=None):
     	return X_df
 
@@ -78,5 +60,5 @@ class FeatureExtractor():
         return self.transform(X_df)
 
     def transform(self, X_df):
-        X=dummify(X_df)
+        X = dummify(X_df)
         return final_dummies_fix(X,self.columns)
