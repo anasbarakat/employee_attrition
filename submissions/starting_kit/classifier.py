@@ -6,8 +6,8 @@ from sklearn.linear_model import LogisticRegression
 
 class Classifier(BaseEstimator):
     def __init__(self):
-        self.clf = RandomForestClassifier()
-        #self.clf = LogisticRegression()
+        #self.clf = RandomForestClassifier()
+        self.clf = LogisticRegression()
 
     def fit(self, X, y):
         #self.clf.fit(X.todense(), y)
